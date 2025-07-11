@@ -67,7 +67,7 @@ public class Chisel extends Item {
 
 
         if (stack.get(ModDataComponentTypes.COORDINATES) !=  null){
-            tooltip.add(Text.literal("Last Block Changes at " + stack.get(ModDataComponentTypes.COORDINATES)));
+            tooltip.add(Text.literal("Last Block Changed at " + stack.get(ModDataComponentTypes.COORDINATES)));
         }
 
 
