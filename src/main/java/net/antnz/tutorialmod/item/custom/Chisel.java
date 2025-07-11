@@ -1,6 +1,7 @@
 package net.antnz.tutorialmod.item.custom;
 
 import net.antnz.tutorialmod.block.ModBlocks;
+import net.antnz.tutorialmod.component.ModDataComponentTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EquipmentSlot;
@@ -47,6 +48,9 @@ public class Chisel extends Item {
                 context.getStack().damage(1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
 
+                context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
+
+
 
             }
         }
@@ -59,6 +63,17 @@ public class Chisel extends Item {
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
 
         tooltip.add(Text.translatable("tipp1"));
+
+
+
+        if (stack.get(ModDataComponentTypes.COORDINATES) !=  null){
+            tooltip.add(Text.literal("Last Block Changes at " + stack.get(ModDataComponentTypes.COORDINATES)));
+        }
+
+
+
+
+
         super.appendTooltip(stack, context, tooltip, type);
     }
 }

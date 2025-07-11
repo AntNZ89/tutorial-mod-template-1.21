@@ -1,6 +1,7 @@
 package net.antnz.tutorialmod;
 
 import net.antnz.tutorialmod.block.ModBlocks;
+import net.antnz.tutorialmod.component.ModDataComponentTypes;
 import net.antnz.tutorialmod.item.ModItemGroups;
 import net.antnz.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -21,7 +22,7 @@ public class TutorialMod implements ModInitializer {
 
 		ModItemGroups.registerItemGroups();
 
-		// test
+		ModDataComponentTypes.registerDataComponentTypes();
 
 
 	}
