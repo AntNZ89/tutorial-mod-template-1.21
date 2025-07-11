@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "tutorialmod:block/pink_garnet_deepslate_ore",
+    "side": "tutorialmod:block/pink_garnet_deepslate_ore",
+    "top": "tutorialmod:block/pink_garnet_deepslate_ore"
+  }
+}
