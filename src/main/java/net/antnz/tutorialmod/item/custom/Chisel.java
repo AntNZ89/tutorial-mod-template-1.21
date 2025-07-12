@@ -48,14 +48,15 @@ public class Chisel extends Item {
                 context.getStack().damage(1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
 
-                world.playSound(null, pos, SoundEvents.WEATHER_RAIN, SoundCategory.BLOCKS);
+                world.playSound(null, pos, SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.BLOCKS);
 
-                context.getStack().set(ModDataComponentTypes.COORDINATES, pos);
-
+                context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
 
             }
         }
+
         return ActionResult.SUCCESS;
+
     }
 
     @Override
@@ -64,10 +65,8 @@ public class Chisel extends Item {
         tooltip.add(Text.translatable("tipp1"));
 
         if (stack.get(ModDataComponentTypes.COORDINATES) != null){
-            tooltip.add(Text.literal("Last clicked block was at: " + ModDataComponentTypes.COORDINATES));
+            tooltip.add(Text.literal("Last clicked block was at: " + stack.get(ModDataComponentTypes.COORDINATES)));
         }
-
-
 
         super.appendTooltip(stack, context, tooltip, type);
     }

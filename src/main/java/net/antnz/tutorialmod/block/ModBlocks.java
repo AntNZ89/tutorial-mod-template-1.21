@@ -69,7 +69,6 @@ public class ModBlocks {
 
 
 
-
     private static void registerBlockItem(String name, Block block){
         Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name),
                 new BlockItem(block, new Item.Settings()));

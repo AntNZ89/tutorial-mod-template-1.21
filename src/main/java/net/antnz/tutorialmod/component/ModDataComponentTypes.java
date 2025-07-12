@@ -15,23 +15,9 @@ public class ModDataComponentTypes {
 
 
 
-    public static final ComponentType<BlockPos> COORDINATES = registerComponentType("coordinates", blockPosBuilder -> blockPosBuilder.codec(BlockPos.CODEC));
-
-
-    private static <T>ComponentType<T> registerComponentType(String name, UnaryOperator<ComponentType.Builder<T>> builderUnaryOperator){
-        return Registry.register(Registries.DATA_COMPONENT_TYPE, Identifier.of(TutorialMod.MOD_ID, name),
-                builderUnaryOperator.apply(ComponentType.builder()).build());
+    public static void registerDataComponentTypes(){
+        TutorialMod.LOGGER.info("Registering Data Component Types for " + TutorialMod.MOD_ID);
     }
-
-
-
-    public static void registerDataComponents(){
-        TutorialMod.LOGGER.info("Registering Data Components for " + TutorialMod.MOD_ID);
-    }
-
-
-
-
 
 
 

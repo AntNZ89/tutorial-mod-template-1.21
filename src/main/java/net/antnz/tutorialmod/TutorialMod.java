@@ -22,7 +22,7 @@ public class TutorialMod implements ModInitializer {
 
 		ModItemGroups.registerItemGroups();
 
-		ModDataComponentTypes.registerDataComponents();
+		ModDataComponentTypes.registerDataComponentTypes();
 
 
 	}
