@@ -17,13 +17,13 @@ import net.minecraft.world.World;
 public class PinkGarnetLampBlock extends Block {
 
 
-
     public static final BooleanProperty CLICKED = BooleanProperty.of("clicked");
 
     public PinkGarnetLampBlock(Settings settings) {
         super(settings);
         setDefaultState(this.getDefaultState().with(CLICKED, true));
     }
+
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
@@ -32,6 +32,7 @@ public class PinkGarnetLampBlock extends Block {
             world.setBlockState(pos, state.cycle(CLICKED));
         }
         return ActionResult.SUCCESS;
+
     }
 
     @Override

@@ -4,6 +4,7 @@ import net.antnz.tutorialmod.block.ModBlocks;
 import net.antnz.tutorialmod.component.ModDataComponentTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.component.ComponentType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -11,6 +12,8 @@ import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -21,17 +24,14 @@ import java.util.Map;
 
 public class Chisel extends Item {
 
-
     public static final Map<Block,Block> CHISEL_MAP =
             Map.of(
                     Blocks.GRASS_BLOCK, ModBlocks.PINK_GARNET_LAMP
             );
 
-
     public Chisel(Settings settings) {
         super(settings);
     }
-
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
@@ -48,29 +48,24 @@ public class Chisel extends Item {
                 context.getStack().damage(1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
 
-                context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
+                world.playSound(null, pos, SoundEvents.WEATHER_RAIN, SoundCategory.BLOCKS);
 
+                context.getStack().set(ModDataComponentTypes.COORDINATES, pos);
 
 
             }
         }
         return ActionResult.SUCCESS;
-
     }
-
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
 
         tooltip.add(Text.translatable("tipp1"));
 
-
-
-        if (stack.get(ModDataComponentTypes.COORDINATES) !=  null){
-            tooltip.add(Text.literal("Last Block Changed at " + stack.get(ModDataComponentTypes.COORDINATES)));
+        if (stack.get(ModDataComponentTypes.COORDINATES) != null){
+            tooltip.add(Text.literal("Last clicked block was at: " + ModDataComponentTypes.COORDINATES));
         }
-
-
 
 
 
