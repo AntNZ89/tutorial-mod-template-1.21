@@ -4,6 +4,7 @@ import net.antnz.tutorialmod.item.ModItems;
 import net.antnz.tutorialmod.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -25,7 +26,7 @@ public class MagicBlock extends Block {
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
 
-        world.playSound(player, pos, SoundEvents.WEATHER_RAIN, SoundCategory.BLOCKS);
+        world.playSound(null, pos, SoundEvents.WEATHER_RAIN, SoundCategory.BLOCKS);
         return ActionResult.SUCCESS;
     }
 
@@ -46,4 +47,6 @@ public class MagicBlock extends Block {
     private boolean isValidItem(ItemStack stack) {
         return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
+
+
 }

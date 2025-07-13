@@ -50,7 +50,8 @@ public class Chisel extends Item {
 
                 world.playSound(null, pos, SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.BLOCKS);
 
-                context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
+                context.getStack().set(ModDataComponentTypes.COORDINATES, pos);
+
 
             }
         }
@@ -65,8 +66,9 @@ public class Chisel extends Item {
         tooltip.add(Text.translatable("tipp1"));
 
         if (stack.get(ModDataComponentTypes.COORDINATES) != null){
-            tooltip.add(Text.literal("Last clicked block was at: " + stack.get(ModDataComponentTypes.COORDINATES)));
+            tooltip.add(Text.literal("§4Last clicked block at: " + stack.get(ModDataComponentTypes.COORDINATES)));
         }
+
 
         super.appendTooltip(stack, context, tooltip, type);
     }

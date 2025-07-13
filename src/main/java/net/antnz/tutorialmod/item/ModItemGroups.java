@@ -13,10 +13,6 @@ import net.minecraft.util.Identifier;
 public class ModItemGroups {
 
 
-
-
-
-
     public static final ItemGroup PINK_GARNET_ITEMS = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TutorialMod.MOD_ID, "pink_garnet_items"),
             FabricItemGroup.builder().icon(()-> new ItemStack(ModItems.PINK_GARNET))
@@ -28,8 +24,15 @@ public class ModItemGroups {
                         entries.add(ModItems.STARLIGHT_ASHES);
                         entries.add(ModItems.CHISEL);
 
+                        entries.add(ModItems.PINK_GARNET_AXE);
+                        entries.add(ModItems.PINK_GARNET_SWORD);
+                        entries.add(ModItems.PINK_GARNET_HOE);
+                        entries.add(ModItems.PINK_GARNET_PICKAXE);
+                        entries.add(ModItems.PINK_GARNET_SHOVEL);
+
                     })
                     .build());
+
 
 
 
@@ -55,9 +58,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PINK_GARNET_TRAPDOOR);
 
                         entries.add(ModBlocks.PINK_GARNET_LAMP);
+
                     })
                     .build());
-
 
 
 

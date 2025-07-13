@@ -10,23 +10,29 @@ import net.minecraft.util.Identifier;
 public class ModTags {
 
 
+
     public static class Blocks{
 
 
-        private static TagKey<Block> blockTagKey(String name){
+        public static final TagKey<Block> NEEDS_PINK_GARNET_TOOL = register("needs_pink_garnet_tool");
+
+        public static final TagKey<Block> INCORRECT_FOR_PINK_GARNET_TOOL = register("incorrect_for_pink_garnet_tool");
+
+
+
+        private static TagKey<Block> register(String name){
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, name));
         }
-
 
     }
 
     public static class Items{
 
 
+        public static final TagKey<Item> TRANSFORMABLE_ITEMS = register("transformable_items");
 
-        public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
 
-        private static TagKey<Item> createTag(String name){
+        private static TagKey<Item> register(String name){
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, name));
         }
 
