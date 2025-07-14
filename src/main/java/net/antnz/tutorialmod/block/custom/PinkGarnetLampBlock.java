@@ -13,8 +13,7 @@ import net.minecraft.world.World;
 
 public class PinkGarnetLampBlock extends Block {
 
-
-    public static final BooleanProperty CLICKED = BooleanProperty.of("clicked");
+    public static final BooleanProperty CLICKED = BooleanProperty.of("clciked");
 
     public PinkGarnetLampBlock(Settings settings) {
         super(settings);
@@ -30,7 +29,9 @@ public class PinkGarnetLampBlock extends Block {
             world.setBlockState(pos, state.cycle(CLICKED));
 
         }
+
         return ActionResult.SUCCESS;
+
     }
 
     @Override

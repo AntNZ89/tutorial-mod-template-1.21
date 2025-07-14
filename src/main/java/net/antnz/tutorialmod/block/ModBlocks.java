@@ -19,7 +19,8 @@ public class ModBlocks {
 
     public static final Block RAW_PINK_GARNET_BLOCK = registerBlock("raw_pink_garnet_block", new Block(AbstractBlock.Settings.create()));
 
-    public static final Block MAGIC_BLOCK = registerBlock("magic_block", new MagicBlock(AbstractBlock.Settings.create()));
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block", new MagicBlock(AbstractBlock.Settings.create()
+            .luminance(state-> 15)));
 
     public static final Block PINK_GARNET_ORE = registerBlock("pink_garnet_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5), AbstractBlock.Settings.create()));
@@ -61,9 +62,9 @@ public class ModBlocks {
     public static final Block PINK_GARNET_TRAPDOOR = registerBlock("pink_garnet_trapdoor", new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().nonOpaque()));
 
 
-
     public static final Block PINK_GARNET_LAMP = registerBlock("pink_garnet_lamp",
             new PinkGarnetLampBlock(AbstractBlock.Settings.create().luminance(state-> state.get(PinkGarnetLampBlock.CLICKED)? 15:0)));
+
 
 
 

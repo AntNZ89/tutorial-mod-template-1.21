@@ -33,29 +33,24 @@ public class ModItems {
 
     public static final Item PINK_GARNET_SWORD = registerItem("pink_garnet_sword",
             new SwordItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 10, -1f))));
-
-
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 10, -2f))));
 
     public static final Item PINK_GARNET_PICKAXE = registerItem("pink_garnet_pickaxe",
             new PickaxeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
-                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 10, -2f))));
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 4, -1f))));
 
-
+    public static final Item PINK_GARNET_AXE = registerItem("pink_garnet_axe",
+            new AxeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 10, -1f))));
 
     public static final Item PINK_GARNET_SHOVEL = registerItem("pink_garnet_shovel",
             new ShovelItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
-                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 10, -1f))));
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 4, -1f))));
 
 
     public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe",
             new HoeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
-                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 10, -2f))));
-
-
-    public static final Item PINK_GARNET_AXE = registerItem("pink_garnet_axe",
-            new AxeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
-                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 10, 2f))));
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 8f, -2f))));
 
 
     public static Item registerItem(String name, Item item){
@@ -82,9 +77,6 @@ public class ModItems {
     public static void registerFuels(){
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES,200);
     }
-
-
-
 
 
 }

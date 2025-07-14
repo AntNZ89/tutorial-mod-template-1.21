@@ -21,20 +21,21 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
                 .add(Items.COAL);
 
+
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.PINK_GARNET_SWORD);
+
+        getOrCreateTagBuilder(ItemTags.AXES)
+                .add(ModItems.PINK_GARNET_AXE);
+
+        getOrCreateTagBuilder(ItemTags.PICKAXES)
+                .add(ModItems.PINK_GARNET_AXE);
 
         getOrCreateTagBuilder(ItemTags.SHOVELS)
                 .add(ModItems.PINK_GARNET_SHOVEL);
 
         getOrCreateTagBuilder(ItemTags.HOES)
                 .add(ModItems.PINK_GARNET_HOE);
-
-        getOrCreateTagBuilder(ItemTags.AXES)
-                .add(ModItems.PINK_GARNET_AXE);
-
-        getOrCreateTagBuilder(ItemTags.PICKAXES)
-                .add(ModItems.PINK_GARNET_PICKAXE);
 
 
 

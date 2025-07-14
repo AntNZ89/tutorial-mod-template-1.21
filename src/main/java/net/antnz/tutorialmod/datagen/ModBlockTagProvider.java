@@ -43,6 +43,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MAGIC_BLOCK)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
 
+        // -> data/tutorialmod/tags/block/incorrect_for_pink_garnet_tool.json
 
 
 
