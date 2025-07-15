@@ -26,7 +26,6 @@ public class ModDataComponentTypes {
     }
 
 
-
     public static void registerDataComponentTypes(){
         TutorialMod.LOGGER.info("Registering Data Component Types for " + TutorialMod.MOD_ID);
     }

@@ -20,7 +20,6 @@ public class ModItems {
 
     public static final Item CHISEL = registerItem("chisel", new Chisel(new Item.Settings()));
 
-
     public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings()));
 
     public static final Item CAULIFLOWER = registerItem("cauliflower", new Item(new Item.Settings().food(FOOD_COMPONENT)));
@@ -47,16 +46,15 @@ public class ModItems {
             new ShovelItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
                     .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 4, -1f))));
 
-
     public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe",
             new HoeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
-                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 8f, -2f))));
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 4f, -2f))));
+
 
 
     public static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);
     }
-
 
 
     public static void registerModItems(){
@@ -75,8 +73,7 @@ public class ModItems {
     }
 
     public static void registerFuels(){
-        FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES,200);
+        FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 200);
     }
-
 
 }

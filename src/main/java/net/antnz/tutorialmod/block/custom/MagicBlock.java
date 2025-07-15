@@ -22,13 +22,14 @@ public class MagicBlock extends Block {
         super(settings);
     }
 
-
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
 
-        world.playSound(null, pos, SoundEvents.WEATHER_RAIN, SoundCategory.BLOCKS);
+        world.playSound(player, pos, SoundEvents.WEATHER_RAIN, SoundCategory.BLOCKS);
         return ActionResult.SUCCESS;
+
     }
+
 
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
@@ -37,16 +38,14 @@ public class MagicBlock extends Block {
             if (isValidItem(itemEntity.getStack())){
 
                 itemEntity.setStack(new ItemStack(ModItems.PINK_GARNET, itemEntity.getStack().getCount()));
+
                 world.playSound(null, pos, SoundEvents.WEATHER_RAIN, SoundCategory.BLOCKS);
 
             }
         }
-
     }
 
     private boolean isValidItem(ItemStack stack) {
         return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
-
-
 }
