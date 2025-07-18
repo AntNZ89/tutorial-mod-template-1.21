@@ -2,6 +2,7 @@ package net.antnz.tutorialmod.item;
 
 import net.antnz.tutorialmod.TutorialMod;
 import net.antnz.tutorialmod.item.custom.Chisel;
+import net.antnz.tutorialmod.item.custom.HammerItem;
 import net.antnz.tutorialmod.util.ModTags;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -49,6 +50,14 @@ public class ModItems {
     public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe",
             new HoeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
                     .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 5f, -2f))));
+
+
+    public static final Item PINK_GARNET_HAMMER = registerItem("pink_garnet_hammer",
+            new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 8f, -1f))));
+
+
+
 
 
 

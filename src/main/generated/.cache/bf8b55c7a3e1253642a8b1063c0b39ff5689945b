@@ -1,4 +1,4 @@
-// 1.21	2025-07-14T22:57:55.0225712	Tutorial Mod/Model Definitions
+// 1.21	2025-07-18T20:18:42.8458973	Tutorial Mod/Model Definitions
 8995c039aa4ff9c9a3cfdc35dcff9890ea3e54b4 assets\tutorialmod\models\item\pink_garnet_axe.json
 92310679f32154e70f1f51d8f6fd7fa07dcc1d20 assets\tutorialmod\models\block\pink_garnet_fence_gate_wall.json
 3d3f4343cc360bfeef36512bf8e54e5113eda449 assets\tutorialmod\models\block\pink_garnet_button_inventory.json
@@ -56,7 +56,7 @@ fa9080666ba4e3910d0814ec35a3e300f861fb1c assets\tutorialmod\models\item\starligh
 a7779ae2aac4f4da3808d0d77fdeae99af2b43f8 assets\tutorialmod\models\item\pink_garnet_wall.json
 62b29b35d15150ffe2026808051a0921d7f2bd1c assets\tutorialmod\models\block\pink_garnet_fence_post.json
 ef1aa6cb184e8340a5afc3a86268274faaf4ce20 assets\tutorialmod\models\item\pink_garnet_ore.json
-3f0c942020caa2fad8b6834694c4368d1fba4e42 assets\tutorialmod\blockstates\pink_garnet_lamp.json
+19e117f512b98bc699379365b240a1afd8dfb66e assets\tutorialmod\blockstates\pink_garnet_lamp.json
 db3c7fd404543728f8b989bee0ca68018dac6e79 assets\tutorialmod\models\item\magic_block.json
 0f3e4f8a994940382fe30e60cec7918bc6551a44 assets\tutorialmod\models\block\pink_garnet_pressure_plate_down.json
 b0993c5a9bb7baa85fb5a4ed797ac9d340957647 assets\tutorialmod\models\block\pink_garnet_wall_inventory.json
@@ -72,6 +72,7 @@ c11dd9eaadb05ad07e98d9462f1f56b8932c0f26 assets\tutorialmod\models\block\pink_ga
 6de4bbea026d441d477cbe2f7b5c9f835eacd8e4 assets\tutorialmod\blockstates\pink_garnet_fence.json
 6a728eda7238fed6b027e801e464250c3f3144ba assets\tutorialmod\blockstates\pink_garnet_block.json
 89a05b8050beaf7cc1233a5d236edfaac9a6bd3e assets\tutorialmod\models\block\pink_garnet_button.json
+00d484aeafa1b6b8a7a6dcc575cfd572b517bd23 assets\tutorialmod\models\item\pink_garnet_hammer.json
 c5c2c9e3791629868052f3ae6a783c1fbeb77e49 assets\tutorialmod\models\block\pink_garnet_lamp.json
 ed27aaa00c275028e1495bb6d6bfdcea1851067b assets\tutorialmod\models\block\magic_block.json
 2ea97b36519593655003595358341ae2e9f6b7f8 assets\tutorialmod\models\block\pink_garnet_trapdoor_top.json
