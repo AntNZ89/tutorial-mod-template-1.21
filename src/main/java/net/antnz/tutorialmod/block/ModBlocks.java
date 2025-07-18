@@ -14,7 +14,6 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 public class ModBlocks {
 
 
-
     public static final Block PINK_GARNET_BLOCK = registerBlock("pink_garnet_block", new Block(AbstractBlock.Settings.create()));
 
     public static final Block RAW_PINK_GARNET_BLOCK = registerBlock("raw_pink_garnet_block", new Block(AbstractBlock.Settings.create()));
@@ -31,19 +30,8 @@ public class ModBlocks {
 
 
 
-
-
-
-
-
-
-
-
-
-
     public static final Block PINK_GARNET_STAIRS = registerBlock("pink_garnet_stairs", new StairsBlock(ModBlocks.PINK_GARNET_BLOCK.getDefaultState(),
             AbstractBlock.Settings.create()));
-
 
     public static final Block PINK_GARNET_SLAB = registerBlock("pink_garnet_slab", new SlabBlock(AbstractBlock.Settings.create()));
 
@@ -67,15 +55,10 @@ public class ModBlocks {
 
 
 
-
     private static void registerBlockItem(String name, Block block){
         Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name),
                 new BlockItem(block, new Item.Settings()));
     }
-
-
-
-
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
@@ -84,14 +67,6 @@ public class ModBlocks {
 
     public static void registerModBlocks(){
         TutorialMod.LOGGER.info("Registering blocks for " + TutorialMod.MOD_ID);
-
-
-
     }
-
-
-
-
-
 
 }

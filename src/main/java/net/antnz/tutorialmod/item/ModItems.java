@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final FoodComponent FOOD_COMPONENT = new FoodComponent.Builder().statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 100),1f).build();
+    public static final FoodComponent FOOD_COMPONENT = new FoodComponent.Builder().statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 100), 1f).build();
 
 
     public static final Item CHISEL = registerItem("chisel", new Chisel(new Item.Settings()));
@@ -48,14 +48,14 @@ public class ModItems {
 
     public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe",
             new HoeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
-                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 4f, -2f))));
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 5f, -2f))));
+
 
 
 
     public static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);
     }
-
 
     public static void registerModItems(){
 
@@ -64,13 +64,10 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(ModItems.PINK_GARNET);
             fabricItemGroupEntries.add(ModItems.RAW_PINK_GARNET);
-
-
         });
 
-
-
     }
+
 
     public static void registerFuels(){
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 200);
