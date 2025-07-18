@@ -28,7 +28,5 @@ public class TutorialMod implements ModInitializer {
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
-
-
 	}
 }
