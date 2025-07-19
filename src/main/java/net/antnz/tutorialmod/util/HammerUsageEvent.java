@@ -25,8 +25,7 @@ public class HammerUsageEvent implements PlayerBlockBreakEvents.Before{
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
 
     @Override
-    public boolean beforeBlockBreak(World world, PlayerEntity player, BlockPos pos,
-                                    BlockState state, @Nullable BlockEntity blockEntity) {
+    public boolean beforeBlockBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity) {
         ItemStack mainHandItem = player.getMainHandStack();
 
         if(mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayerEntity serverPlayer) {
@@ -42,6 +41,7 @@ public class HammerUsageEvent implements PlayerBlockBreakEvents.Before{
                 HARVESTED_BLOCKS.add(position);
                 serverPlayer.interactionManager.tryBreakBlock(position);
                 HARVESTED_BLOCKS.remove(position);
+
             }
         }
 
@@ -55,10 +55,20 @@ public class HammerUsageEvent implements PlayerBlockBreakEvents.Before{
         if (hit.getType() == HitResult.Type.BLOCK) {
             BlockHitResult blockHit = (BlockHitResult) hit;
 
-            if(blockHit.getSide() == Direction.DOWN || blockHit.getSide() == Direction.UP) {
-                for(int x = -range; x <= range; x++) {
-                    for(int y = -range; y <= range; y++) {
+//            if(blockHit.getSide() == Direction.DOWN || blockHit.getSide() == Direction.UP){
+//                for (int x = initalBlockPos.getX()-1; x <= initalBlockPos.getX()+1; x++ ){
+//                    for (int y = initalBlockPos.getZ()-1 ; y <= initalBlockPos.getZ()+1; y++){
+//                        positions.add(new BlockPos(x, initalBlockPos.getY() , y));
+//                    }
+//                }
+//            }
+
+            if (blockHit.getSide() == Direction.DOWN || blockHit.getSide() == Direction.UP){
+                for (int x = -range; x<= range; x++){
+                    for (int y = -range; y<= range; x++){
+
                         positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY(), initalBlockPos.getZ() + y));
+
                     }
                 }
             }
