@@ -29,8 +29,15 @@ public class ModItemGroups {
                         entries.add(ModItems.PINK_GARNET_HOE);
                         entries.add(ModItems.PINK_GARNET_PICKAXE);
                         entries.add(ModItems.PINK_GARNET_SHOVEL);
-
                         entries.add(ModItems.PINK_GARNET_HAMMER);
+
+                        entries.add(ModItems.PINK_GARNET_BOOTS);
+                        entries.add(ModItems.PINK_GARNET_LEGGINGS);
+                        entries.add(ModItems.PINK_GARNET_CHESTPLATE);
+                        entries.add(ModItems.PINK_GARNET_HELMET);
+
+
+
 
                     })
                     .build());
@@ -41,8 +48,8 @@ public class ModItemGroups {
 
 
     public static final ItemGroup PINK_GARNET_BLOCKS = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(TutorialMod.MOD_ID, "pink_garnet_blocks"),
-            FabricItemGroup.builder().icon(()-> new ItemStack(ModBlocks.MAGIC_BLOCK))
+            Identifier.of(TutorialMod.MOD_ID, "pinl_garnet_blocks"),
+            FabricItemGroup.builder().icon(()-> new ItemStack(ModBlocks.PINK_GARNET_DOOR))
                     .displayName(Text.translatable("itemgroup.tutorialmod.pink_garnet_blocks"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.MAGIC_BLOCK);
@@ -60,10 +67,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PINK_GARNET_TRAPDOOR);
 
                         entries.add(ModBlocks.PINK_GARNET_LAMP);
-
                     })
                     .build());
-
 
 
 

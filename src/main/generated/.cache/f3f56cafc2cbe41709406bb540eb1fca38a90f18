@@ -1,6 +1,7 @@
-// 1.21	2025-07-18T20:18:42.843898	Tutorial Mod/Tags for minecraft:item
+// 1.21	2025-07-21T21:58:13.830807	Tutorial Mod/Tags for minecraft:item
 05abdd0d8560b0671f8c122f795fcb1bc2155276 data\tutorialmod\tags\item\transformable_items.json
 8ced195f504be266fa1818b0cfbd2ee244987195 data\minecraft\tags\item\axes.json
+1a39dedd310f06bf1a624b4363f683ebe3b2905b data\minecraft\tags\item\trimmable_armor.json
 8f653a3350d8f1fbd15d245e7de66379a30930e2 data\minecraft\tags\item\swords.json
 8ced195f504be266fa1818b0cfbd2ee244987195 data\minecraft\tags\item\pickaxes.json
 351330e211b4558f91f0550566fbac71f5a3b2e5 data\minecraft\tags\item\shovels.json
