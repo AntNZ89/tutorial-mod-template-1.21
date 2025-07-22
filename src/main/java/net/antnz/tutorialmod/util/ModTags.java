@@ -28,7 +28,7 @@ public class ModTags {
 
 
         private static TagKey<Item> createTag(String name){
-            return TagKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID,name));
+            return TagKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, name));
         }
 
     }

@@ -37,3 +37,4 @@ public class PinkGarnetLampBlock extends Block {
         builder.add(CLICKED);
     }
 }
+

@@ -27,24 +27,14 @@ public class ModArmorMaterials {
                 map.put(ArmorItem.Type.BODY, 4);
 
 
-
             }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, ()-> Ingredient.ofItems(ModItems.PINK_GARNET),
                     List.of(new ArmorMaterial.Layer(Identifier.of(TutorialMod.MOD_ID,"pink_garnet"))), 0,0));
 
 
 
-
-
-
-    public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material){
-
-        return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(TutorialMod.MOD_ID, name), material.get());
-
+    public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> materialSupplier){
+        return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(TutorialMod.MOD_ID, name), materialSupplier.get());
     }
-
-
-
-
 
 
 

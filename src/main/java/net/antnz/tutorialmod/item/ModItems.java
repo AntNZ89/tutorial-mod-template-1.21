@@ -76,20 +76,6 @@ public class ModItems {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);
     }
@@ -109,5 +95,4 @@ public class ModItems {
     public static void registerFuels(){
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 200);
     }
-
 }

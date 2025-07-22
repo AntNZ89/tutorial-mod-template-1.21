@@ -13,16 +13,24 @@ import java.util.function.UnaryOperator;
 
 public class ModDataComponentTypes {
 
-    public static final ComponentType<BlockPos> COORDINATES = register("coordinates", blockPosBuilder -> blockPosBuilder.codec(BlockPos.CODEC));
+    public static final ComponentType<BlockPos> COORDINATES = componentType("coordinates", blockPosBuilder -> blockPosBuilder.codec(BlockPos.CODEC));
 
 
-    private static <T>ComponentType<T> register(String name, UnaryOperator<ComponentType.Builder<T>> unaryOperator){
+    public static <T>ComponentType<T> componentType(String name, UnaryOperator<ComponentType.Builder<T>> builderUnaryOperator){
+
         return Registry.register(Registries.DATA_COMPONENT_TYPE, Identifier.of(TutorialMod.MOD_ID, name),
-                unaryOperator.apply(ComponentType.builder()).build());
+                builderUnaryOperator.apply(ComponentType.builder()).build());
+
     }
 
     public static void registerDataComponentTypes(){
-        TutorialMod.LOGGER.info("Registering Data Component Types for " + TutorialMod.MOD_ID);
+        TutorialMod.LOGGER.info("Registering data component types for " + TutorialMod.MOD_ID);
     }
+
+
+
+
+
+
 
 }
