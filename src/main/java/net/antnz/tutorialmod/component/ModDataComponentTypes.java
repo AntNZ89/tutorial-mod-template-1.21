@@ -17,20 +17,13 @@ public class ModDataComponentTypes {
 
 
     public static <T>ComponentType<T> componentType(String name, UnaryOperator<ComponentType.Builder<T>> builderUnaryOperator){
-
         return Registry.register(Registries.DATA_COMPONENT_TYPE, Identifier.of(TutorialMod.MOD_ID, name),
                 builderUnaryOperator.apply(ComponentType.builder()).build());
-
     }
 
     public static void registerDataComponentTypes(){
         TutorialMod.LOGGER.info("Registering data component types for " + TutorialMod.MOD_ID);
     }
-
-
-
-
-
 
 
 }
