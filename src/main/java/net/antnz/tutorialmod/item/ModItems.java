@@ -74,7 +74,6 @@ public class ModItems {
 
 
 
-
     public static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);
     }

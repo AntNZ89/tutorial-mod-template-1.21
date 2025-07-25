@@ -15,9 +15,10 @@ public class PinkGarnetLampBlock extends Block {
 
     public static final BooleanProperty CLICKED = BooleanProperty.of("clicked");
 
+
     public PinkGarnetLampBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(CLICKED, true));
+        this.setDefaultState(this.getDefaultState().with(CLICKED, true));
     }
 
 

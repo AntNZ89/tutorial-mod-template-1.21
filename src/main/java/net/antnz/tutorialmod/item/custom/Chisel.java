@@ -24,14 +24,17 @@ import java.util.Map;
 
 public class Chisel extends Item {
 
-    public static final Map<Block,Block> CHISEL_MAP =
+
+    public static final Map<Block, Block> CHISEL_MAP =
             Map.of(
                     Blocks.GRASS_BLOCK, ModBlocks.PINK_GARNET_LAMP
             );
 
+
     public Chisel(Settings settings) {
         super(settings);
     }
+
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
@@ -55,6 +58,7 @@ public class Chisel extends Item {
             }
         }
         return ActionResult.SUCCESS;
+
     }
 
     @Override
