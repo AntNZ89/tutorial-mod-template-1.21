@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "tutorialmod:pink_garnet"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " c ",
+    " s ",
+    " s "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:pink_garnet_shovel"
+  }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="net.antnz.tutorialmod.tutorial-mod-template-1.21" options="-AoutRefMapFile=C:\Users\anton\Desktop\tutorial-mod-template-1.21\tutorial-mod-template-1.21\build\classes\java\main\tutorialmod-refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=C:\Users\anton\Desktop\tutorial-mod-template-1.21\tutorial-mod-template-1.21\build\loom-cache\mixin-map-net.fabricmc.yarn.1_21.1.21+build.9-v2.main.tiny -AinMapFileNamedIntermediary=C:\Users\anton\.gradle\caches\fabric-loom\1.21\net.fabricmc.yarn.1_21.1.21+build.9-v2\mappings.tiny" />
+      <module name="net.antnz.tutorialmod.tutorial-mod-template-1.21.main" options="-AoutRefMapFile=C:\Users\anton\Desktop\tutorial-mod-template-1.21\tutorial-mod-template-1.21\build\classes\java\main\tutorialmod-refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=C:\Users\anton\Desktop\tutorial-mod-template-1.21\tutorial-mod-template-1.21\build\loom-cache\mixin-map-net.fabricmc.yarn.1_21.1.21+build.9-v2.main.tiny -AinMapFileNamedIntermediary=C:\Users\anton\.gradle\caches\fabric-loom\1.21\net.fabricmc.yarn.1_21.1.21+build.9-v2\mappings.tiny" />
+      <module name="net.antnz.tutorialmod.tutorial-mod-template-1.21.test" options="-AoutRefMapFile=C:\Users\anton\Desktop\tutorial-mod-template-1.21\tutorial-mod-template-1.21\build\classes\java\test\test-tutorialmod-refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=C:\Users\anton\Desktop\tutorial-mod-template-1.21\tutorial-mod-template-1.21\build\loom-cache\mixin-map-net.fabricmc.yarn.1_21.1.21+build.9-v2.test.tiny -AinMapFileNamedIntermediary=C:\Users\anton\.gradle\caches\fabric-loom\1.21\net.fabricmc.yarn.1_21.1.21+build.9-v2\mappings.tiny" />
+    </option>
+  </component>
+</project>
