@@ -67,8 +67,9 @@ public class Chisel extends Item {
         tooltip.add(Text.translatable("tipp1"));
 
         if (stack.get(ModDataComponentTypes.COORDINATES) != null){
-            tooltip.add(Text.literal("§4Last clicked block at: " + stack.get(ModDataComponentTypes.COORDINATES)));
+            tooltip.add(Text.literal("Last clcked block at: " + stack.get(ModDataComponentTypes.COORDINATES)));
         }
+
         super.appendTooltip(stack, context, tooltip, type);
     }
 }

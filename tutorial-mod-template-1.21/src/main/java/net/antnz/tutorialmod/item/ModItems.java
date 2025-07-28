@@ -16,8 +16,8 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final FoodComponent FOOD_COMPONENT = new FoodComponent.Builder().statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 100), 1f).build();
 
+    public static final FoodComponent FOOD_COMPONENT = new FoodComponent.Builder().statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 200), 1f).build();
 
     public static final Item CHISEL = registerItem("chisel", new Chisel(new Item.Settings()));
 
@@ -46,6 +46,7 @@ public class ModItems {
     public static final Item PINK_GARNET_SHOVEL = registerItem("pink_garnet_shovel",
             new ShovelItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
                     .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 4, -1f))));
+
 
     public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe",
             new HoeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
