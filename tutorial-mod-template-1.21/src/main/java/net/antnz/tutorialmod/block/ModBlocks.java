@@ -49,9 +49,8 @@ public class ModBlocks {
 
     public static final Block PINK_GARNET_TRAPDOOR = registerBlock("pink_garnet_trapdoor", new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().nonOpaque()));
 
-
     public static final Block PINK_GARNET_LAMP = registerBlock("pink_garnet_lamp",
-            new PinkGarnetLampBlock(AbstractBlock.Settings.create().luminance(state-> state.get(PinkGarnetLampBlock.CLICKED)? 15:0)));
+            new PinkGarnetLampBlock(AbstractBlock.Settings.create().luminance(state-> state.get(PinkGarnetLampBlock.CLICKED)? 0:15)));
 
 
 

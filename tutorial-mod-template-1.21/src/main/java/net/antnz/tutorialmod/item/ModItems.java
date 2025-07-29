@@ -48,7 +48,6 @@ public class ModItems {
             new ShovelItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
                     .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 4, -1f))));
 
-
     public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe",
             new HoeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
                     .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 4, -1f))));
@@ -71,7 +70,7 @@ public class ModItems {
                     .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(15))));
 
     public static final Item PINK_GARNET_BOOTS = registerItem("pink_garnet_boots",
-            new ModArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+            new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
 
 

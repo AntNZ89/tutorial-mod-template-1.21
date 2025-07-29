@@ -24,11 +24,13 @@ import java.util.Map;
 
 public class Chisel extends Item {
 
-
-    public static final Map<Block, Block> CHISEL_MAP =
+    public static final Map<Block,Block> CHISEL_MAP =
             Map.of(
-                    Blocks.GRASS_BLOCK, ModBlocks.PINK_GARNET_LAMP
+                    Blocks.GRASS_BLOCK, ModBlocks.MAGIC_BLOCK
             );
+
+
+
 
 
     public Chisel(Settings settings) {
@@ -51,14 +53,13 @@ public class Chisel extends Item {
                 context.getStack().damage(1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
 
-                world.playSound(null, pos, SoundEvents.WEATHER_RAIN, SoundCategory.BLOCKS);
+                world.playSound(null, pos, SoundEvents.AMBIENT_UNDERWATER_ENTER, SoundCategory.BLOCKS);
 
                 context.getStack().set(ModDataComponentTypes.COORDINATES, pos);
 
             }
         }
         return ActionResult.SUCCESS;
-
     }
 
     @Override
@@ -69,6 +70,7 @@ public class Chisel extends Item {
         if (stack.get(ModDataComponentTypes.COORDINATES) != null){
             tooltip.add(Text.literal("Last clcked block at: " + stack.get(ModDataComponentTypes.COORDINATES)));
         }
+
 
         super.appendTooltip(stack, context, tooltip, type);
     }
