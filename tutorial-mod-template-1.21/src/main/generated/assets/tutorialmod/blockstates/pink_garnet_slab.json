@@ -4,7 +4,7 @@
       "model": "tutorialmod:block/pink_garnet_slab"
     },
     "type=double": {
-      "model": "tutorialmod:block/pink_garnet_deepslate_ore"
+      "model": "tutorialmod:block/pink_garnet_block"
     },
     "type=top": {
       "model": "tutorialmod:block/pink_garnet_slab_top"

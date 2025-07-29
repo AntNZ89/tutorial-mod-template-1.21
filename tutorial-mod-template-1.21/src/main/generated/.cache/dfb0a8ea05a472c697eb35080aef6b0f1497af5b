@@ -1,4 +1,4 @@
-// 1.21	2025-07-27T17:04:51.0677641	Tutorial Mod/Recipes
+// 1.21	2025-07-29T23:18:33.0131466	Tutorial Mod/Recipes
 3b4a664577d08717ac5bc35a1c3d98f92df337f3 data\tutorialmod\recipe\special.json
 26f5e9d4b947229a35915c6044be3e7ae7309375 data\tutorialmod\advancement\recipes\misc\pink_garnet_from_blasting_raw_pink_garnet.json
 c0b9fe5dd22f1f2febb47ac03606994d6c3067d8 data\tutorialmod\recipe\pink_garnet_from_blasting_raw_pink_garnet.json
@@ -19,7 +19,7 @@ e1c6f06946338396b44604d89bd437490151ecc5 data\tutorialmod\advancement\recipes\mi
 183ef77caafedd5fe26523313add8719c51c34bd data\tutorialmod\advancement\recipes\misc\raw_pink_garnet_block.json
 6a84b180e209076bc545edb9589587f71cd7e312 data\tutorialmod\advancement\recipes\misc\pink_garnet_sword.json
 9ce2d85a70cb708202d701b25cc67ec535525617 data\tutorialmod\recipe\pink_garnet.json
-fe3314846f99d7e23e3f22b251ab7b6002b755f6 data\tutorialmod\recipe\pink_garnet_sword.json
+c9057d65ff6e74c200a0a52da874929114df43ec data\tutorialmod\recipe\pink_garnet_sword.json
 486de360327f8d75c3eff9b7768b6436f1d312d2 data\tutorialmod\recipe\pink_garnet_axe.json
 49501be7c679777345acaf8f5dec6ccac8ca4e30 data\tutorialmod\advancement\recipes\misc\pink_garnet_shovel.json
 7340939bbf6aeb9521e6cf573f8d6ddea13dcd76 data\tutorialmod\recipe\pink_garnet_from_smelting_raw_pink_garnet.json
