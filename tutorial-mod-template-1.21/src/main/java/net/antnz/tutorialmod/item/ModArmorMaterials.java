@@ -19,18 +19,18 @@ import java.util.function.Supplier;
 public class ModArmorMaterials {
 
     public static final RegistryEntry<ArmorMaterial> PINK_GARNET_ARMOR_MATERIAL = register("pink_garnet",
-            ()-> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), typeIntegerEnumMap -> {
+            ()-> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
 
-                typeIntegerEnumMap.put(ArmorItem.Type.BOOTS, 2);
-                typeIntegerEnumMap.put(ArmorItem.Type.LEGGINGS, 4);
-                typeIntegerEnumMap.put(ArmorItem.Type.CHESTPLATE, 6);
-                typeIntegerEnumMap.put(ArmorItem.Type.HELMET, 2);
-                typeIntegerEnumMap.put(ArmorItem.Type.BODY, 8);
-
-            }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, ()-> Ingredient.ofItems(ModItems.PINK_GARNET),
+                map.put(ArmorItem.Type.BOOTS, 2);
+                map.put(ArmorItem.Type.LEGGINGS, 4);
+                map.put(ArmorItem.Type.CHESTPLATE, 6);
+                map.put(ArmorItem.Type.HELMET, 2);
+                map.put(ArmorItem.Type.BODY, 8);
+            }),20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, ()-> Ingredient.ofItems(ModItems.PINK_GARNET),
                     List.of(new ArmorMaterial.Layer(Identifier.of(TutorialMod.MOD_ID, "pink_garnet"))),0,0));
 
-    public static RegistryEntry<ArmorMaterial> register(String name, Supplier<ArmorMaterial> materialSupplier){
+
+    private static RegistryEntry<ArmorMaterial> register(String name, Supplier<ArmorMaterial> materialSupplier){
         return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(TutorialMod.MOD_ID, name), materialSupplier.get());
     }
 
