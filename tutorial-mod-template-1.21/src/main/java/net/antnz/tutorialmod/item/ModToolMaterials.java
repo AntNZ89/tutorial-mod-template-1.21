@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial{
 
-    PINK_GARNET(ModTags.Blocks.INCORRECT_FOR_PINK_GARNET_TOOL, 1500, 13.0F, 5.0F, 15, () -> Ingredient.ofItems(ModItems.PINK_GARNET));
+    PINK_GARNET(ModTags.Blocks.INCORRECT_FOR_PINK_GARNET_TOOL, 1500, 11.0F, 4.0F, 15, () -> Ingredient.ofItems(ModItems.PINK_GARNET));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
@@ -58,6 +58,7 @@ public enum ModToolMaterials implements ToolMaterial{
     public Ingredient getRepairIngredient() {
         return (Ingredient)this.repairIngredient.get();
     }
+
 
 
 

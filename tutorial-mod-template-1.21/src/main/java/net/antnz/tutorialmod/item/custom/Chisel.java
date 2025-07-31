@@ -30,9 +30,6 @@ public class Chisel extends Item {
             );
 
 
-
-
-
     public Chisel(Settings settings) {
         super(settings);
     }
