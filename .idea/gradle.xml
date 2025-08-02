@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$/tutorial-mod-template-1.21" />
           </set>
         </option>
+        <option name="resolveExternalAnnotations" value="true" />
       </GradleProjectSettings>
     </option>
   </component>

@@ -24,7 +24,7 @@ public class TutorialMod implements ModInitializer {
 
 		ModItemGroups.registerItemGroups();
 
-		ModDataComponentTypes.registerDataComponentTypes();
+		ModDataComponentTypes.registerModDataComponentTypes();
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
