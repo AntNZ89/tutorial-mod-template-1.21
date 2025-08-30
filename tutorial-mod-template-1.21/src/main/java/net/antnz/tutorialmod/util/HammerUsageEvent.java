@@ -19,13 +19,15 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import static net.antnz.tutorialmod.item.custom.HammerItem.getBlocksToBeDestroyed;
+
 public class HammerUsageEvent implements PlayerBlockBreakEvents.Before{
-
-
+    // Done with the help of https://github.com/CoFH/CoFHCore/blob/c23d117dcd3b3b3408a138716b15507f709494cd/src/main/java/cofh/core/event/AreaEffectEvents.java
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
 
     @Override
-    public boolean beforeBlockBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity) {
+    public boolean beforeBlockBreak(World world, PlayerEntity player, BlockPos pos,
+                                    BlockState state, @Nullable BlockEntity blockEntity) {
         ItemStack mainHandItem = player.getMainHandStack();
 
         if(mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayerEntity serverPlayer) {
@@ -33,7 +35,7 @@ public class HammerUsageEvent implements PlayerBlockBreakEvents.Before{
                 return true;
             }
 
-            for(BlockPos position : getBlocksToBeDestroyed(1, pos, serverPlayer)) {
+            for(BlockPos position : HammerItem.getBlocksToBeDestroyed(1, pos, serverPlayer)) {
                 if(pos == position || !hammer.isCorrectForDrops(mainHandItem, world.getBlockState(position))) {
                     continue;
                 }
@@ -41,55 +43,9 @@ public class HammerUsageEvent implements PlayerBlockBreakEvents.Before{
                 HARVESTED_BLOCKS.add(position);
                 serverPlayer.interactionManager.tryBreakBlock(position);
                 HARVESTED_BLOCKS.remove(position);
-
             }
         }
 
         return true;
     }
-
-    public static List<BlockPos> getBlocksToBeDestroyed(int range, BlockPos initalBlockPos, ServerPlayerEntity player) {
-        List<BlockPos> positions = new ArrayList<>();
-        HitResult hit = player.raycast(20, 0, false);
-
-        if (hit.getType() == HitResult.Type.BLOCK) {
-            BlockHitResult blockHit = (BlockHitResult) hit;
-
-//            if(blockHit.getSide() == Direction.DOWN || blockHit.getSide() == Direction.UP){
-//                for (int x = initalBlockPos.getX()-1; x <= initalBlockPos.getX()+1; x++ ){
-//                    for (int y = initalBlockPos.getZ()-1 ; y <= initalBlockPos.getZ()+1; y++){
-//                        positions.add(new BlockPos(x, initalBlockPos.getY() , y));
-//                    }
-//                }
-//            }
-
-            if (blockHit.getSide() == Direction.DOWN || blockHit.getSide() == Direction.UP){
-                for (int x = -range; x<= range; x++){
-                    for (int y = -range; y<= range; x++){
-
-                        positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY(), initalBlockPos.getZ() + y));
-
-                    }
-                }
-            }
-
-            if(blockHit.getSide() == Direction.NORTH || blockHit.getSide() == Direction.SOUTH) {
-                for(int x = -range; x <= range; x++) {
-                    for(int y = -range; y <= range; y++) {
-                        positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY() + y, initalBlockPos.getZ()));
-                    }
-                }
-            }
-
-            if(blockHit.getSide() == Direction.EAST || blockHit.getSide() == Direction.WEST) {
-                for(int x = -range; x <= range; x++) {
-                    for(int y = -range; y <= range; y++) {
-                        positions.add(new BlockPos(initalBlockPos.getX(), initalBlockPos.getY() + y, initalBlockPos.getZ() + x));
-                    }
-                }
-            }
-        }
-        return positions;
-    }
-
 }

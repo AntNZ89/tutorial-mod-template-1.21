@@ -20,7 +20,7 @@ public class ModItems {
 
     public static final FoodComponent FOOD_COMPONENT = new FoodComponent.Builder().statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 200),1f).build();
 
-    public static final Item CHISEL = registerItem("chisel", new Chisel(new Item.Settings()));
+    public static final Item CHISEL = registerItem("chisel", new Chisel(new Item.Settings().maxCount(1)));
 
     public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings()));
 

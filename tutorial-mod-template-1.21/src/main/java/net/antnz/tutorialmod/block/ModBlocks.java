@@ -43,9 +43,9 @@ public class ModBlocks {
 
     public static final Block PINK_GARNET_FENCE_GATE = registerBlock("pink_garnet_fence_gate", new FenceGateBlock(WoodType.WARPED, AbstractBlock.Settings.create()));
 
-    public static final Block PINK_GARNET_WALL = registerBlock("pink_garnet_wall", new WallBlock(AbstractBlock.Settings.create().nonOpaque()));
+    public static final Block PINK_GARNET_WALL = registerBlock("pink_garnet_wall", new WallBlock(AbstractBlock.Settings.create()));
 
-    public static final Block PINK_GARNET_DOOR = registerBlock("pink_garnet_door", new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create()));
+    public static final Block PINK_GARNET_DOOR = registerBlock("pink_garnet_door", new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().nonOpaque()));
 
     public static final Block PINK_GARNET_TRAPDOOR = registerBlock("pink_garnet_trapdoor", new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().nonOpaque()));
 

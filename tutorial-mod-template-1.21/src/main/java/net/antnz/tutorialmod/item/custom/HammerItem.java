@@ -18,4 +18,48 @@ public class HammerItem extends MiningToolItem {
         super(material, BlockTags.PICKAXE_MINEABLE, settings);
     }
 
+    public static List<BlockPos> getBlocksToBeDestroyed(int range, BlockPos initalBlockPos, ServerPlayerEntity player) {
+        List<BlockPos> positions = new ArrayList<>();
+        HitResult hit = player.raycast(20, 0, false);
+
+        if (hit.getType() == HitResult.Type.BLOCK) {
+            BlockHitResult blockHit = (BlockHitResult) hit;
+
+//            if(blockHit.getSide() == Direction.DOWN || blockHit.getSide() == Direction.UP){
+//                for (int x = initalBlockPos.getX()-1; x <= initalBlockPos.getX()+1; x++ ){
+//                    for (int y = initalBlockPos.getZ()-1 ; y <= initalBlockPos.getZ()+1; y++){
+//                        positions.add(new BlockPos(x, initalBlockPos.getY() , y));
+//                    }
+//                }
+//            }
+
+            if (blockHit.getSide() == Direction.DOWN || blockHit.getSide() == Direction.UP){
+                for (int x = -range; x<= range; x++){
+                    for (int y = -range; y<= range; x++){
+
+                        positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY(), initalBlockPos.getZ() + y));
+
+                    }
+                }
+            }
+
+            if(blockHit.getSide() == Direction.NORTH || blockHit.getSide() == Direction.SOUTH) {
+                for(int x = -range; x <= range; x++) {
+                    for(int y = -range; y <= range; y++) {
+                        positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY() + y, initalBlockPos.getZ()));
+                    }
+                }
+            }
+
+            if(blockHit.getSide() == Direction.EAST || blockHit.getSide() == Direction.WEST) {
+                for(int x = -range; x <= range; x++) {
+                    for(int y = -range; y <= range; y++) {
+                        positions.add(new BlockPos(initalBlockPos.getX(), initalBlockPos.getY() + y, initalBlockPos.getZ() + x));
+                    }
+                }
+            }
+        }
+        return positions;
+    }
+
 }

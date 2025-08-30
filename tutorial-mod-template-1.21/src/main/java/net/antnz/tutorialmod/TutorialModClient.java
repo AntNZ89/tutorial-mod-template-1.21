@@ -8,6 +8,9 @@ import net.minecraft.client.render.RenderLayer;
 public class TutorialModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+
+        TutorialMod.LOGGER.info("-------------------------------- ----------------------");
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_GARNET_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_GARNET_TRAPDOOR, RenderLayer.getCutout());
     }
