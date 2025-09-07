@@ -30,6 +30,7 @@ public class ModItemGroups {
                         entries.add(ModItems.PINK_GARNET_PICKAXE);
                         entries.add(ModItems.PINK_GARNET_SHOVEL);
                         entries.add(ModItems.PINK_GARNET_HAMMER);
+                        entries.add(ModItems.KAUPEN_BOW);
 
                         entries.add(ModItems.PINK_GARNET_BOOTS);
                         entries.add(ModItems.PINK_GARNET_LEGGINGS);
@@ -38,9 +39,6 @@ public class ModItemGroups {
                         entries.add(ModItems.PINK_GARNET_HORSE_ARMOR);
 
                         entries.add(ModItems.KAUPEN_SMITHING_TEMPLATE);
-
-
-
 
                     })
                     .build());

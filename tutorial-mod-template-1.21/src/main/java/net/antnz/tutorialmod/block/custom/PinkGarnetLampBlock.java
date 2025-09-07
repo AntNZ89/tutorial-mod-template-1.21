@@ -28,7 +28,7 @@ public class PinkGarnetLampBlock extends Block {
 
     public PinkGarnetLampBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(CLICKED, true));
+        this.setDefaultState(this.getDefaultState().with(CLICKED, true));
     }
 
     @Override
@@ -36,7 +36,8 @@ public class PinkGarnetLampBlock extends Block {
 
         if (world instanceof ServerWorld){
 
-            world.setBlockState(pos, state.cycle(CLICKED));
+            BlockState blockState = state.cycle(CLICKED);
+            world.setBlockState(pos, blockState);
 
         }
         return ActionResult.SUCCESS;

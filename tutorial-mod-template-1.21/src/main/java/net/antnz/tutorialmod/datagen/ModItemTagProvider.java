@@ -21,6 +21,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
                 .add(Items.COAL);
 
+        getOrCreateTagBuilder(ModTags.Items.TEST)
+                .add(ModItems.CHISEL);
+
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.PINK_GARNET_SWORD);
@@ -55,6 +58,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES)
                 .add(ModItems.KAUPEN_SMITHING_TEMPLATE);
+
+        getOrCreateTagBuilder(ItemTags.BOW_ENCHANTABLE)
+                .add(ModItems.KAUPEN_BOW);
 
 
 

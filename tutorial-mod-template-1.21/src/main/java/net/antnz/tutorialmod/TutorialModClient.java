@@ -14,5 +14,6 @@ public class TutorialModClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_GARNET_TRAPDOOR, RenderLayer.getCutout());
 
         ModModelPredicates.registerModelPredicates();
+
     }
 }

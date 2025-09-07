@@ -30,6 +30,8 @@ public class ModTags {
 
         public static final TagKey<Item> TRANSFORMABLE_ITEMS = register("transformable_items");
 
+        public static final TagKey<Item> TEST = register("test");
+
 
         private static TagKey<Item> register(String name){
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, name));
