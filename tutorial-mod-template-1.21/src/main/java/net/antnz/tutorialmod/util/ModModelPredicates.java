@@ -17,11 +17,11 @@ public class ModModelPredicates {
         ModelPredicateProviderRegistry.register(ModItems.CHISEL, Identifier.of(TutorialMod.MOD_ID, "used"),
                 (stack, world, entity, seed) -> stack.get(ModDataComponentTypes.COORDINATES) != null ? 1f : 0f);
 
-        registerCustomBoew(ModItems.KAUPEN_BOW);
+        registerCustomBow(ModItems.KAUPEN_BOW);
     }
 
 
-    private static void registerCustomBoew(Item item){
+    private static void registerCustomBow(Item item){
         ModelPredicateProviderRegistry.register(item, Identifier.ofVanilla("pull"), (stack, world, entity, seed) -> {
             if (entity == null) {
                 return 0.0F;
