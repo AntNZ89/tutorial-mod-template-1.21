@@ -20,6 +20,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.spongepowered.asm.mixin.injection.At;
 
 public class TutorialMod implements ModInitializer {
 	public static final String MOD_ID = "tutorialmod";
@@ -38,22 +39,22 @@ public class TutorialMod implements ModInitializer {
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
+
+
 		AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
 
 			if (entity instanceof SheepEntity sheep && world instanceof ServerWorld){
 				if (player.getMainHandStack().getItem() == Items.END_ROD){
-					player.sendMessage(Text.literal("öööööö"));
+					player.sendMessage(Text.literal("HELLO"));
 					player.getMainHandStack().decrement(1);
 					sheep.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 200));
 				}
-
 				return ActionResult.PASS;
-
 			}
-
 
 			return ActionResult.PASS;
 		});
+
 
 	}
 }
