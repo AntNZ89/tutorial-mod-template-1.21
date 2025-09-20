@@ -4,6 +4,7 @@ import net.antnz.tutorialmod.block.ModBlocks;
 import net.antnz.tutorialmod.component.ModDataComponentTypes;
 import net.antnz.tutorialmod.item.ModItemGroups;
 import net.antnz.tutorialmod.item.ModItems;
+import net.antnz.tutorialmod.sound.ModSounds;
 import net.antnz.tutorialmod.util.HammerUsageEvent;
 import net.antnz.tutorialmod.util.ModTags;
 import net.fabricmc.api.ModInitializer;
@@ -32,10 +33,9 @@ public class TutorialMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItems.registerFuels();
-
 		ModItemGroups.registerItemGroups();
-
 		ModDataComponentTypes.registerModDataComponentTypes();
+		ModSounds.registerSounds();
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 

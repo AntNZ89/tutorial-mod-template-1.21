@@ -3,6 +3,7 @@ package net.antnz.tutorialmod.block;
 import net.antnz.tutorialmod.TutorialMod;
 import net.antnz.tutorialmod.block.custom.MagicBlock;
 import net.antnz.tutorialmod.block.custom.PinkGarnetLampBlock;
+import net.antnz.tutorialmod.sound.ModSounds;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -19,7 +20,7 @@ public class ModBlocks {
     public static final Block RAW_PINK_GARNET_BLOCK = registerBlock("raw_pink_garnet_block", new Block(AbstractBlock.Settings.create()));
 
     public static final Block MAGIC_BLOCK = registerBlock("magic_block", new MagicBlock(AbstractBlock.Settings.create()
-            .luminance(state-> 15)));
+            .luminance(state-> 15).sounds(ModSounds.MAGIC_BLOCK_SOUNDS)));
 
     public static final Block PINK_GARNET_ORE = registerBlock("pink_garnet_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5), AbstractBlock.Settings.create()));

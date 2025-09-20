@@ -2,6 +2,7 @@ package net.antnz.tutorialmod.item.custom;
 
 import net.antnz.tutorialmod.block.ModBlocks;
 import net.antnz.tutorialmod.component.ModDataComponentTypes;
+import net.antnz.tutorialmod.sound.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.component.ComponentType;
@@ -50,7 +51,7 @@ public class Chisel extends Item {
                 context.getStack().damage(1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
 
-                world.playSound(null, pos, SoundEvents.AMBIENT_UNDERWATER_ENTER, SoundCategory.BLOCKS);
+                world.playSound(null, pos, ModSounds.CHISEL_USE, SoundCategory.BLOCKS);
 
                 context.getStack().set(ModDataComponentTypes.COORDINATES, pos);
 
