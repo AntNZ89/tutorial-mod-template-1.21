@@ -14,6 +14,7 @@ import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.SheepEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -42,16 +43,14 @@ public class TutorialMod implements ModInitializer {
 
 
 		AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
-
 			if (entity instanceof SheepEntity sheep && world instanceof ServerWorld){
 				if (player.getMainHandStack().getItem() == Items.END_ROD){
-					player.sendMessage(Text.literal("HELLO"));
+					player.sendMessage(Text.literal("..."));
 					player.getMainHandStack().decrement(1);
 					sheep.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 200));
 				}
 				return ActionResult.PASS;
 			}
-
 			return ActionResult.PASS;
 		});
 

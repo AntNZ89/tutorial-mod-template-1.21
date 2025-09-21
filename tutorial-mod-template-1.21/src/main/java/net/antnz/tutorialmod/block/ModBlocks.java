@@ -28,9 +28,6 @@ public class ModBlocks {
     public static final Block PINK_GARNET_DEEPSLATE_ORE = registerBlock("pink_garnet_deepslate_ore", new ExperienceDroppingBlock(UniformIntProvider.create(100,200),
             AbstractBlock.Settings.create()));
 
-
-
-
     public static final Block PINK_GARNET_STAIRS = registerBlock("pink_garnet_stairs", new StairsBlock(ModBlocks.PINK_GARNET_BLOCK.getDefaultState(),
             AbstractBlock.Settings.create()));
 
@@ -55,18 +52,18 @@ public class ModBlocks {
 
 
 
-    private static void registerBlockItem(String name, Block block){
-        Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()));
-    }
-
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, name), block);
     }
 
+    private static void registerBlockItem(String name, Block block){
+        Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name),
+                new BlockItem(block, new Item.Settings()));
+    }
+
     public static void registerModBlocks(){
-        TutorialMod.LOGGER.info("Registering blocks for " + TutorialMod.MOD_ID);
+        TutorialMod.LOGGER.info("Registering Blocks for " + TutorialMod.MOD_ID);
     }
 
 }
