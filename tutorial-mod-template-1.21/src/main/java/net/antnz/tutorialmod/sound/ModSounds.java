@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 
 public class ModSounds {
 
+
     public static final SoundEvent CHISEL_USE = registerSoundEvent("chisel_use");
 
     public static final SoundEvent MAGIC_BLOCK_BREAK = registerSoundEvent("magic_block_break");
@@ -19,12 +20,12 @@ public class ModSounds {
     public static final SoundEvent MAGIC_BLOCK_FALL = registerSoundEvent("magic_block_fall");
 
 
-    public static final BlockSoundGroup MAGIC_BLOCK_SOUNDS = new BlockSoundGroup(1f, 1f,
-            MAGIC_BLOCK_BREAK, MAGIC_BLOCK_STEP, MAGIC_BLOCK_PLACE, MAGIC_BLOCK_HIT, MAGIC_BLOCK_FALL);
+    public static final BlockSoundGroup MAGIC_BLOCK_SOUNDS = new BlockSoundGroup(1f, 1f, MAGIC_BLOCK_BREAK, MAGIC_BLOCK_STEP,
+            MAGIC_BLOCK_PLACE, MAGIC_BLOCK_HIT, MAGIC_BLOCK_FALL);
 
 
     private static SoundEvent registerSoundEvent(String name){
-        Identifier id = Identifier.of(TutorialMod.MOD_ID, name);
+        Identifier id = Identifier.of(TutorialMod.MOD_ID);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
 
