@@ -25,7 +25,7 @@ public class ModSounds {
 
 
     private static SoundEvent registerSoundEvent(String name){
-        Identifier id = Identifier.of(TutorialMod.MOD_ID);
+        Identifier id = Identifier.of(TutorialMod.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
 
