@@ -1,7 +1,8 @@
-// 1.21	2025-09-27T22:12:57.7851456	Tutorial Mod/Model Definitions
+// 1.21	2025-10-03T22:09:04.9656016	Tutorial Mod/Model Definitions
 81f2e13d6cc679527d92913f5a65a9a039ed52d9 assets\tutorialmod\models\item\pink_garnet_chestplate_netherite_trim.json
 4d633dc23654e5f70770dc4b835059a04300f26f assets\tutorialmod\models\block\pink_garnet_lamp_on.json
 e4a99a451261b58f0ad99c765ea8dfb6af84412b assets\tutorialmod\blockstates\pink_garnet_ore.json
+f746b64540daf2ab6302b3ec01a78490c48fc10b assets\tutorialmod\models\item\bar_brawl_music_disc.json
 e45c0bc65a8eab7b5b7c1517ad75f7c54a4bfab7 assets\tutorialmod\models\item\pink_garnet_leggings_redstone_trim.json
 22e3abaf5d35f4abb244206541c642bd57e93135 assets\tutorialmod\models\item\pink_garnet_fence.json
 8d78b866bd5c4782e72d22f2bf83140a407bb550 assets\tutorialmod\models\block\pink_garnet_door_bottom_right.json

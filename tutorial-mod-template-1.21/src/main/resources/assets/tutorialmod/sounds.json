@@ -36,9 +36,16 @@
     ]
   },
   "bar_brawl": {
-    "subtitle": "sounds.tutorialmod.bar_brawl",
     "sounds": [
-      "tutorialmod:bar_brawl"
+      {
+        "name": "tutorialmod:bar_brawl",
+        "stream": true
+      }
     ]
   }
+
+
+
+
+
 }
