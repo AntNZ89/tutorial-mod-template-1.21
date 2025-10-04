@@ -40,7 +40,6 @@ public class ModItemGroups {
 
                         entries.add(ModItems.KAUPEN_SMITHING_TEMPLATE);
                         entries.add(ModItems.BAR_BRAWL_MUSIC_DISC);
-
                     })
                     .build());
 
@@ -48,9 +47,8 @@ public class ModItemGroups {
 
 
 
-
     public static final ItemGroup PINK_GARNET_BLOCKS = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(TutorialMod.MOD_ID, "pinl_garnet_blocks"),
+            Identifier.of(TutorialMod.MOD_ID, "pink_garnet_blocks"),
             FabricItemGroup.builder().icon(()-> new ItemStack(ModBlocks.PINK_GARNET_DOOR))
                     .displayName(Text.translatable("itemgroup.tutorialmod.pink_garnet_blocks"))
                     .entries((displayContext, entries) -> {

@@ -22,12 +22,10 @@ public class ModTrimMaterials {
     public static final RegistryKey<ArmorTrimMaterial> PINK_GARNET = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
             Identifier.of(TutorialMod.MOD_ID, "pink_garnet"));
 
-
     public static void bootstrap(Registerable<ArmorTrimMaterial> registerable){
         register(registerable, PINK_GARNET, Registries.ITEM.getEntry(ModItems.PINK_GARNET),
                 Style.EMPTY.withColor(TextColor.parse("#b03fe0").getOrThrow()), 1.0f);
     }
-
 
     private static void register(Registerable<ArmorTrimMaterial> registerable, RegistryKey<ArmorTrimMaterial> armorTrimMaterialRegistryKey,
                                  RegistryEntry<Item> item, Style style, float itemModelIndex){
@@ -37,9 +35,6 @@ public class ModTrimMaterials {
 
         registerable.register(armorTrimMaterialRegistryKey, trimMaterial);
 
-
     }
-
-
 
 }
