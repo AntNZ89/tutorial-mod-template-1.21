@@ -2,6 +2,7 @@ package net.antnz.tutorialmod;
 
 import net.antnz.tutorialmod.block.ModBlocks;
 import net.antnz.tutorialmod.component.ModDataComponentTypes;
+import net.antnz.tutorialmod.effect.ModEffects;
 import net.antnz.tutorialmod.item.ModItemGroups;
 import net.antnz.tutorialmod.item.ModItems;
 import net.antnz.tutorialmod.sound.ModSounds;
@@ -37,6 +38,7 @@ public class TutorialMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModDataComponentTypes.registerModDataComponentTypes();
 		ModSounds.registerSounds();
+		ModEffects.registerEffects();
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
