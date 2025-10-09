@@ -42,8 +42,6 @@ public class TutorialMod implements ModInitializer {
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
-
-
 		AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
 			if (entity instanceof SheepEntity sheep && world instanceof ServerWorld){
 				if (player.getMainHandStack().getItem() == Items.END_ROD){

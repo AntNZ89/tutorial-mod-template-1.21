@@ -13,14 +13,14 @@ import net.minecraft.util.Identifier;
 
 public class ModEffects {
 
-    public static final RegistryEntry<StatusEffect> SLIMEY = registerStatuesEffect("slimey",
-            new SlimeyEffect(StatusEffectCategory.NEUTRAL, 0x36ebab)
+
+    public static final RegistryEntry<StatusEffect> SLIMEY = registerStatusEffect("slimey",
+            new SlimeyEffect(StatusEffectCategory.NEUTRAL, 0x36abeb)
                     .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
-                            Identifier.of(TutorialMod.MOD_ID, "slimey"), -0.25f,
+                            Identifier.of(TutorialMod.MOD_ID), -0.25,
                             EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
-
-    private static RegistryEntry<StatusEffect> registerStatuesEffect(String name, StatusEffect statusEffect){
+    private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect){
         return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(TutorialMod.MOD_ID, name), statusEffect);
     }
 
