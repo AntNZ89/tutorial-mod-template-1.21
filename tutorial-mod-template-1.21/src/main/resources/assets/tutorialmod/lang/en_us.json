@@ -18,6 +18,11 @@
   "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
   "item.tutorialmod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
 
+  "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.slimey_potion": "Slimey Tipped Arrow",
+
   "item.tutorialmod.pink_garnet_helmet": "Pink Garnet Helmet",
   "item.tutorialmod.pink_garnet_chestplate": "Pink Garnet Chestplate",
   "item.tutorialmod.pink_garnet_leggings": "Pink Garnet Leggings",
